@@ -16,13 +16,11 @@ class App extends Component {
       unit: 'C',
       placeName: ''
     };
-
-    this.setWeatherData();
   }
 
   componentDidMount() {
     this.geocoder = new google.maps.Geocoder;
-    console.log(this.geocoder);
+    this.setWeatherData();
   }
 
   getWeatherDataFromCoords(lat, lon, placeName) {
